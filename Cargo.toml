@@ -2,7 +2,7 @@
 name = "blockchain-wasm"
 version = "0.1.0"
 authors = ["Nicolas AMBRY <nicolas.ambry@gmail.com>"]
-edition = "2019"
+edition = "2018"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
