@@ -3,12 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <title>Blockchain simulation</title>
+    <style>
+      body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
   </head>
   <body>
-    <noscript
-      >This page contains webassembly and javascript content, please enable
-      javascript in your browser.</noscript
-    >
+    <form id="block">
+      <label for="id">ID</label>
+      <input type="text" value="" name="id" id="id" />
+
+      <label for="data">Data</label>
+      <input type="text" value="" name="data" id="data" />
+
+      <label for="hash">Hash</label>
+      <input type="text" value="" name="hash" id="hash" />
+    </form>
+    <button id="mine">Mine</button>
     <script src="./bootstrap.js"></script>
   </body>
 </html>
