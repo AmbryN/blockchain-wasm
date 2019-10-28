@@ -54,6 +54,8 @@ impl Block {
         hash
     }
 
+    /* Concatenates id and data, applies a SHA256 encryption
+    and sets the struct's hash */
     pub fn mine(&mut self) {
         let message = format!("{}{}", self.id, self.data);
         let digest = digest(&SHA256, &message.as_bytes());
