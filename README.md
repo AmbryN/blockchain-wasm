@@ -6,7 +6,8 @@
 
 ## About
 
-A blockchain's block generator using Rust to process the data and WebAssembly/JavaScript to render it in the browser.
+A blockchain's block visualisation tool.  
+It is using **Rust** to do the heavy calculations (hashing and pattern matching) and **WebAssembly - JS** to render the result in the browser.
 
 ## Actual development stage
 
