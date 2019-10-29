@@ -18,12 +18,38 @@
     </style>
   </head>
   <body>
+    <h1>Blockchain simulator</h1>
     <form id="block">
       <label for="id">ID</label>
-      <input type="text" readonly="true" value="" name="id" id="id" />
+      <input
+        type="text"
+        readonly="true"
+        value=""
+        name="id"
+        id="id"
+      /><br /><br />
+
+      <label for="nonce">Nonce</label>
+      <input
+        type="text"
+        readonly="true"
+        value=""
+        name="nonce"
+        id="nonce"
+      /><br /><br />
 
       <label for="data">Data</label>
-      <input type="text" value="" name="data" id="data" />
+      <textarea name="data" id="data" cols="28" rows="3"></textarea><br /><br />
+
+      <label for="pattern">Hash start pattern</label>
+      <input
+        type="text"
+        value=""
+        name="pattern"
+        id="pattern"
+        maxlength="5"
+        size="5"
+      /><br /><br />
 
       <label for="hash">Hash</label>
       <input type="text" readonly="true" value="" name="hash" id="hash" />
