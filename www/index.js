@@ -25,7 +25,7 @@ class Blockchain {
   }
 
   addBlock() {
-    let lenght = this.blocks.length;
+    let length = this.blocks.length;
     let block = Block.new(length);
     if (length != 0) {
       block.set_previous(this.blocks[length - 1].get_hash());
