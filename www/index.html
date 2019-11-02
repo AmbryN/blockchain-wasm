@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>Blockchain simulation</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <style>
       body {
         position: absolute;
@@ -18,43 +24,136 @@
     </style>
   </head>
   <body>
-    <h1>Blockchain simulator</h1>
-    <form id="block">
-      <label for="id">ID</label>
-      <input
-        type="text"
-        readonly="true"
-        value=""
-        name="id"
-        id="id"
-      /><br /><br />
+    <div class="container">
+      <div class="row">
+        <h1>Blockchain simulator</h1>
+      </div>
+      <div class="row">
+        <p>
+          <label for="pattern">Hash start pattern</label>
+          <input
+            type="text"
+            value=""
+            name="pattern"
+            id="pattern"
+            maxlength="5"
+            size="5"
+          />
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <form class="border" id="block">
+            <h2>Block n° 0</h2>
+            <div class="form-group">
+              <label for="id1">ID</label>
+              <input
+                class="form-control"
+                type="text"
+                readonly="true"
+                value=""
+                name="id"
+                id="id"
+              />
+            </div>
+            <div class="form-group">
+              <label for="nonce">Nonce</label>
+              <input
+                class="form-control"
+                type="text"
+                readonly="true"
+                value=""
+                name="nonce"
+                id="nonce"
+              />
+            </div>
+            <div class="form-group">
+              <label for="data">Data</label>
+              <textarea
+                class="form-control"
+                name="data"
+                id="data"
+                cols="28"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="hash">Hash</label>
+              <input
+                class="form-control"
+                type="text"
+                readonly="true"
+                value=""
+                name="hash"
+                id="hash"
+              />
+            </div>
+            <button id="mine">Mine</button>
+          </form>
+        </div>
+        <div class="col-sm">
+          <form class="border" id="block1">
+            <h2>Block n° 1</h2>
+            <div class="form-group">
+              <label for="id1">ID</label>
+              <input
+                class="form-control"
+                type="text"
+                readonly="true"
+                value=""
+                name="id1"
+                id="id1"
+              />
+            </div>
+            <div class="form-group">
+              <label for="nonce1">Nonce</label>
+              <input
+                class="form-control"
+                type="text"
+                readonly="true"
+                value=""
+                name="nonce1"
+                id="nonce1"
+              />
+            </div>
+            <div class="form-group">
+              <label for="data1">Data</label>
+              <textarea
+                class="form-control"
+                name="data1"
+                id="data1"
+                cols="28"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="previous1">Previous</label>
+              <input
+                class="form-control"
+                type="text"
+                readonly="true"
+                value=""
+                name="previous1"
+                id="previous1"
+              />
+            </div>
+            <div class="form-group">
+              <label for="hash1">Hash</label>
+              <input
+                class="form-control"
+                type="text"
+                readonly="true"
+                value=""
+                name="hash1"
+                id="hash1"
+              />
+            </div>
+            <button id="mine1">Mine</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
-      <label for="nonce">Nonce</label>
-      <input
-        type="text"
-        readonly="true"
-        value=""
-        name="nonce"
-        id="nonce"
-      /><br /><br />
-
-      <label for="data">Data</label>
-      <textarea name="data" id="data" cols="28" rows="3"></textarea><br /><br />
-
-      <label for="pattern">Hash start pattern</label>
-      <input
-        type="text"
-        value=""
-        name="pattern"
-        id="pattern"
-        maxlength="5"
-        size="5"
-      /><br /><br />
-
-      <label for="hash">Hash</label>
-      <input type="text" readonly="true" value="" name="hash" id="hash" />
-    </form>
-    <button id="mine">Mine</button>
     <script src="./bootstrap.js"></script>
   </body>
 </html>

@@ -20,21 +20,19 @@ pub struct Block {
     nonce: u32,
     data: String,
     hash: String,
+    previous: String,
 }
 
 #[wasm_bindgen]
 impl Block {
-    pub fn new() -> Block {
+    pub fn new(id: u32) -> Block {
         Block {
-            id: 0,
+            id,
             nonce: 0,
             data: "test".to_string(),
             hash: "".to_string(),
+            previous: "".to_string(),
         }
-    }
-
-    fn set_id(&mut self, id: u32) {
-        self.id = id;
     }
 
     pub fn get_id(&self) -> u32 {
@@ -63,6 +61,15 @@ impl Block {
         hash
     }
 
+    pub fn get_previous(&self) -> String {
+        let previous = self.previous.clone();
+        previous
+    }
+
+    pub fn set_previous(&mut self, previous: String) {
+        self.previous = previous;
+    }
+
     /* Mines a block until the hash starts
     with the defined pattern (max. 5 characters)
     and sets its new hash
@@ -88,7 +95,7 @@ impl Block {
 
     // Concatenates id, nonce and data
     fn generate_message(&self) -> String {
-        format!("{}{}{}", self.id, self.nonce, self.data)
+        format!("{}{}{}{}", self.id, self.nonce, self.data, self.previous)
     }
 
     // Hash function that generates the SHA256 of a message
