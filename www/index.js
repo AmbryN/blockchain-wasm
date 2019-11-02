@@ -45,7 +45,7 @@ const chain = new Blockchain();
 
 // Add blocks
 chain.addBlock();
-block.mine("");
+chain.getBlock(0).mine("");
 chain.addBlock();
 
 // Initializes the UI with the block's attributes
