@@ -43,17 +43,16 @@
       </div>
       <div class="row">
         <div class="col-sm">
-          <form class="border" id="block">
+          <form class="border" name="block">
             <h2>Block n° 0</h2>
             <div class="form-group">
-              <label for="id1">ID</label>
+              <label for="id">ID</label>
               <input
                 class="form-control"
                 type="text"
                 readonly="true"
                 value=""
                 name="id"
-                id="id"
               />
             </div>
             <div class="form-group">
@@ -64,7 +63,6 @@
                 readonly="true"
                 value=""
                 name="nonce"
-                id="nonce"
               />
             </div>
             <div class="form-group">
@@ -72,10 +70,19 @@
               <textarea
                 class="form-control"
                 name="data"
-                id="data"
                 cols="28"
                 rows="3"
               ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="previous">Previous</label>
+              <input
+                class="form-control"
+                type="text"
+                readonly="true"
+                value=""
+                name="previous"
+              />
             </div>
             <div class="form-group">
               <label for="hash">Hash</label>
@@ -85,70 +92,64 @@
                 readonly="true"
                 value=""
                 name="hash"
-                id="hash"
               />
             </div>
-            <button id="mine">Mine</button>
+            <button name="mine">Mine</button>
           </form>
         </div>
         <div class="col-sm">
-          <form class="border" id="block1">
+          <form class="border" name="block">
             <h2>Block n° 1</h2>
             <div class="form-group">
-              <label for="id1">ID</label>
+              <label for="id">ID</label>
               <input
                 class="form-control"
                 type="text"
                 readonly="true"
                 value=""
-                name="id1"
-                id="id1"
+                name="id"
               />
             </div>
             <div class="form-group">
-              <label for="nonce1">Nonce</label>
+              <label for="nonce">Nonce</label>
               <input
                 class="form-control"
                 type="text"
                 readonly="true"
                 value=""
-                name="nonce1"
-                id="nonce1"
+                name="nonce"
               />
             </div>
             <div class="form-group">
-              <label for="data1">Data</label>
+              <label for="data">Data</label>
               <textarea
                 class="form-control"
-                name="data1"
-                id="data1"
+                name="data"
                 cols="28"
                 rows="3"
               ></textarea>
             </div>
             <div class="form-group">
-              <label for="previous1">Previous</label>
+              <label for="previous">Previous</label>
               <input
                 class="form-control"
                 type="text"
                 readonly="true"
                 value=""
-                name="previous1"
-                id="previous1"
+                name="previous"
               />
             </div>
             <div class="form-group">
-              <label for="hash1">Hash</label>
+              <label for="hash">Hash</label>
               <input
                 class="form-control"
                 type="text"
                 readonly="true"
                 value=""
-                name="hash1"
-                id="hash1"
+                name="hash"
               />
             </div>
-            <button id="mine1">Mine</button>
+            <button name="mine">Mine</button>
           </form>
         </div>
       </div>

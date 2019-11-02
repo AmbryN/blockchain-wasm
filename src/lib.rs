@@ -31,7 +31,8 @@ impl Block {
             nonce: 0,
             data: "test".to_string(),
             hash: "".to_string(),
-            previous: "".to_string(),
+            previous: "0000000000000000000000000000000000000000000000000000000000000000"
+                .to_string(),
         }
     }
 
