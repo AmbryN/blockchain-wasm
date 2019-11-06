@@ -36,6 +36,7 @@ class Blockchain {
     let nextBlock = this.blocks[block.get_id() + 1];
     if (nextBlock) {
       nextBlock.set_previous(block.get_hash());
+      nextBlock.mine("");
     }
   }
 }
